@@ -12,7 +12,7 @@
 
 - css and responsive design : to ensure seamless performance on any device .
 
-### Key Features : 
+## Key Features : 
 - Advanced Search :  Quickly find your favorite movies or shows and access all the details you need in one place.
 
 - Real-time Content : This platform uses the TMDb API for constantly updated movie and show data, ensuring users have the latest information at their fingertips.
