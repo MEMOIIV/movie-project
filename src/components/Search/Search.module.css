@@ -1,0 +1,14 @@
+.rating{
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    background-color: var(--lightBgColor);
+    top: 0;
+    right: 0;
+}
+.rating p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+}

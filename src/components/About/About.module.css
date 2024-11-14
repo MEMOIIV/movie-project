@@ -1,0 +1,24 @@
+body{
+    font-family: var(--FountFamilyGlobal);
+   
+}
+.layer{
+    background-image: url(../../../public/img/logo.webp);
+    background-size: cover;
+    height: 100vh;
+}
+.welcome{
+    color: #e8da97;
+}
+.textHeder{
+    width: 75%;
+padding-left: 10px;
+ backdrop-filter: blur(10px); 
+  border-radius: 15px; 
+}
+body span{
+    font-weight: 600; 
+}
+.bg_card{
+background-color:  #e8da97;
+}
