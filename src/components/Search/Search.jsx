@@ -7,7 +7,7 @@ export default function Search() {
     const {dataApi , dataTv } = useContext(SearchContext);
     let { id, media } = useParams();
 return (
-    <div className='container my-5 py-5'>
+    <div className='container my-5 py-3'>
         <div className="row">
             {dataApi?.map((allData , index)=>{
                 return <div key={index} className="col-md-3">
