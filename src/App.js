@@ -44,13 +44,14 @@ export default function App() {
 
   useEffect(() => {
     checkReload();
-    geLogInToken() 
   }, []);
 
   return (
     <Routes>
       <Route path="/" element={<Main ifUserLogin={myToken} remove={removeUseData} />}>
-        <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+        <Route path="home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+        {myToken != null ? <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+        :<Route path="/" element={<Login/>} />}
         <Route path="home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
         <Route path="about" element={<ProtectedRoute><About /></ProtectedRoute>} />
         <Route path="movies" element={<ProtectedRoute><AllMovies /></ProtectedRoute>} />
