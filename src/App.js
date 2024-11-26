@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'; // استخدم Routes و Route
+import { Routes, Route } from 'react-router-dom'; // استخدم Routes و Route
 import './App.css';
 import Main from './components/Main/Main';
 import Home from './components/Home/Home';
@@ -13,14 +13,6 @@ import About from './components/About/About';
 
 export default function App() {
   const [myToken, setMyToken] = useState(null);
-
-  function ProtectedRoute(props) {
-    if (myToken == null) {
-      return  <h2>Error not found</h2>; // إعادة التوجيه إلى صفحة تسجيل الدخول إذا لم يكن هناك توكن
-    } else {
-      return <>{props.children}</>; // إظهار المحتوى المحمي
-    }
-  };
 
   function geLogInToken() {
     const token = localStorage.getItem('token');
@@ -43,7 +35,7 @@ export default function App() {
 
   useEffect(() => {
     checkReload();
-  }, []);
+  },);
 
   return (
     <Routes>
