@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'; // استخدم Routes و Route
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Main from './components/Main/Main';
 import Home from './components/Home/Home';

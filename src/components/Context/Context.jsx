@@ -14,14 +14,14 @@ export default function Context(Props) {
     async function isNameValid(query) {
       const {data} = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=ab6f02890a894dfd18b04c025b5de2eb&query=${query}`);
       setDataApi(data.results)  
-      return dataApi !== null;  // إذا كانت قاعدة البيانات تحتوي على نتائج
+      return dataApi !== null;  
 };
 
 // التحقق من صحة اسم المسلسل 
   async function tvShow(query) {
       const {data} = await axios.get(`https://api.themoviedb.org/3/search/tv?api_key=ab6f02890a894dfd18b04c025b5de2eb&query=${query}`);
       setDataApiTv(data.results)  
-      return dataApiTv !== null;  // إذا كانت قاعدة البيانات تحتوي على نتائج
+      return dataApiTv !== null; 
 };
 
     async function handleInputChange(event){
@@ -35,8 +35,8 @@ export default function Context(Props) {
       const isValid = await isNameValid(searchQuery);
       const allTvShow = await tvShow (searchQuery);
       if (isValid && allTvShow && searchQuery!=='' ) {
-        localStorage.setItem('nameFood', searchQuery);  // حفظ اسم لفيلم في localStorage
-        navigate('/search');  // الانتقال إلى صفحة البحث
+        localStorage.setItem('nameFood', searchQuery);  
+        navigate('/search'); 
         // window.location.reload()
     };
   };
@@ -46,8 +46,8 @@ export default function Context(Props) {
     const isValid = await isNameValid(searchQuery);
     const allTvShow = await tvShow (searchQuery);
       if (isValid && allTvShow && searchQuery!=='' ) {
-        localStorage.setItem('nameFood', searchQuery);  // حفظ اسم لفيلم في localStorage
-        navigate('/search');  // الانتقال إلى صفحة البحث
+        localStorage.setItem('nameFood', searchQuery);  
+        navigate('/search'); 
         // window.location.reload()
     } else {
         setErrorMessage('Please enter a valid food name and Do not leave the input empty.');
