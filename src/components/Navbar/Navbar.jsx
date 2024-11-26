@@ -47,7 +47,27 @@ const {valueInput , goToSearch , searchQuery} = useContext(SearchContext);
       </div>
       </ul>
       
-      </>:''}
+      </>:<ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <Link className="nav-link" aria-current="page" to="home">Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/movies">Movies</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/tv">TvShow</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/people">People</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="about">About</Link>
+        </li>
+        <div className="d-flex" role="search">
+        <input className="form-control me-2 search" type="search" placeholder="Search" value={searchQuery} onChange={valueInput} aria-label="Search"/>
+        <button className='btn btn-info' onClick={goToSearch}>search</button>
+      </div>
+      </ul>}
     
       <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
       
@@ -62,18 +82,27 @@ const {valueInput , goToSearch , searchQuery} = useContext(SearchContext);
         </ul>
           <ul className="navbar-nav mb-2 mb-lg-0 align-items-center  ">
         <li className="nav-item me-0 ">
-          <div className={NavbarCss.cursor + " nav-link"} onClick={logOut}>LogOut</div>
+        <button className='btn btn-danger p-0 ms-2'> <div className={NavbarCss.cursor + " nav-link"} onClick={logOut}>Logout</div></button>
         </li>
           </ul>
 
-        </>: <ul  className="navbar-nav mb-2 mb-lg-0 align-items-center">
-        <li className="nav-item">
-          <Link className=" nav-link" to="register">Register</Link>
+        </>: 
+        <>
+        <ul className="navbar-nav mb-2 mb-lg-0 align-items-center">
+        <li className="nav-item ">
+        <Link to=""><i className="fa-brands fa-facebook"></i></Link>
+        <Link to=""><i className="fa-brands fa-spotify"></i></Link>
+        <Link to=""><i className="fa-brands fa-instagram"></i></Link>
+        <Link to=""><i className="fa-brands fa-youtube"></i></Link>
         </li>
+        </ul>
+        <ul  className="navbar-nav mb-2 mb-lg-0 align-items-center">
         <li className="nav-item">
-          <Link className="nav-link" to="login">Login</Link>
+          <button className='btn btn-info p-0 ms-2 '><Link className="nav-link text-black" to="login">Login</Link></button>
         </li>
-        </ul>}
+        </ul>
+        </>
+      }
 
       </ul>
     </div>

@@ -3,7 +3,6 @@ import './App.css';
 import Main from './components/Main/Main';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
-import Register from './components/Register/Register';
 import AllMovies from './components/AllMovies/AllMovies';
 import AllTvShow from './components/AllTvShow/AllTvShow';
 import People from './components/people/People';
@@ -49,18 +48,17 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Main ifUserLogin={myToken} remove={removeUseData} />}>
-        <Route path="home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-        {myToken != null ? <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+        <Route path="" element={<><Home /></>} />
+        {myToken != null ? <Route path="/" element={<><Home /></>} />
         :<Route path="/" element={<Login/>} />}
-        <Route path="home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-        <Route path="about" element={<ProtectedRoute><About /></ProtectedRoute>} />
-        <Route path="movies" element={<ProtectedRoute><AllMovies /></ProtectedRoute>} />
-        <Route path="tv" element={<ProtectedRoute><AllTvShow /></ProtectedRoute>} />
-        <Route path="search" element={<ProtectedRoute><Search /></ProtectedRoute>} />
-        <Route path="people" element={<ProtectedRoute><People /></ProtectedRoute>} />
+        <Route path="home" element={<><Home /></>} />
+        <Route path="about" element={<><About /></>} />
+        <Route path="movies" element={<><AllMovies /></>} />
+        <Route path="tv" element={<><AllTvShow /></>} />
+        <Route path="search" element={<><Search /></>} />
+        <Route path="people" element={<><People /></>} />
         <Route path="details/:media/:id" element={<Details />} />
         <Route path="login" element={<Login loginTkn={geLogInToken} />} />
-        <Route path="register" element={<Register />} />
         <Route path="*" element={<h2>Error</h2>} />
       </Route>
     </Routes>
