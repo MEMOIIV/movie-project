@@ -81,8 +81,8 @@ const {valueInput , goToSearch , searchQuery} = useContext(SearchContext);
         </li>
         </ul>
           <ul className="navbar-nav mb-2 mb-lg-0 align-items-center  ">
-        <li className="nav-item me-0 ">
-        <button className='btn btn-danger p-0 ms-2'> <div className={NavbarCss.cursor + " nav-link"} onClick={logOut}>Logout</div></button>
+        <li className=" w-100">
+        <button className='btn btn-danger p-0 ms-2 w-100'> <div className={NavbarCss.cursor + " nav-link"} onClick={logOut}>Logout</div></button>
         </li>
           </ul>
 
@@ -97,8 +97,8 @@ const {valueInput , goToSearch , searchQuery} = useContext(SearchContext);
         </li>
         </ul>
         <ul  className="navbar-nav mb-2 mb-lg-0 align-items-center">
-        <li className="nav-item">
-          <button className='btn btn-info p-0 ms-2 '><Link className="nav-link text-black" to="login">Login</Link></button>
+        <li className="w-100">
+          <button className='btn btn-info p-0 ms-2 w-100 '><Link className="nav-link text-black" to="login">Login</Link></button>
         </li>
         </ul>
         </>
